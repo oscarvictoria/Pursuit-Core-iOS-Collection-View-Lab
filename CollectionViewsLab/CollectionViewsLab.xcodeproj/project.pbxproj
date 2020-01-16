@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		BECA4BC123CFD157009CF517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECA4BBF23CFD157009CF517 /* Main.storyboard */; };
 		BECA4BC323CFD15A009CF517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECA4BC223CFD15A009CF517 /* Assets.xcassets */; };
 		BECA4BC623CFD15A009CF517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECA4BC423CFD15A009CF517 /* LaunchScreen.storyboard */; };
+		BECA4BCE23CFD245009CF517 /* CountriesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA4BCD23CFD245009CF517 /* CountriesAPIClient.swift */; };
+		BECA4BD023CFD255009CF517 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA4BCF23CFD255009CF517 /* Countries.swift */; };
+		BECA4BD323CFD2BF009CF517 /* NetworkHelper in Frameworks */ = {isa = PBXBuildFile; productRef = BECA4BD223CFD2BF009CF517 /* NetworkHelper */; };
+		BECA4BD523CFE589009CF517 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA4BD423CFE589009CF517 /* CountryCell.swift */; };
+		BECA4BD823CFE68D009CF517 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = BECA4BD723CFE68D009CF517 /* ImageKit */; };
+		BECA4BDA23CFE8FF009CF517 /* CountryDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA4BD923CFE8FF009CF517 /* CountryDVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		BECA4BC223CFD15A009CF517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BECA4BC523CFD15A009CF517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BECA4BC723CFD15A009CF517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECA4BCD23CFD245009CF517 /* CountriesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAPIClient.swift; sourceTree = "<group>"; };
+		BECA4BCF23CFD255009CF517 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		BECA4BD423CFE589009CF517 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		BECA4BD923CFE8FF009CF517 /* CountryDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECA4BD323CFD2BF009CF517 /* NetworkHelper in Frameworks */,
+				BECA4BD823CFE68D009CF517 /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +71,10 @@
 				BECA4BB923CFD157009CF517 /* AppDelegate.swift */,
 				BECA4BBB23CFD157009CF517 /* SceneDelegate.swift */,
 				BECA4BBD23CFD157009CF517 /* ViewController.swift */,
+				BECA4BD923CFE8FF009CF517 /* CountryDVC.swift */,
+				BECA4BD423CFE589009CF517 /* CountryCell.swift */,
+				BECA4BCF23CFD255009CF517 /* Countries.swift */,
+				BECA4BCD23CFD245009CF517 /* CountriesAPIClient.swift */,
 				BECA4BBF23CFD157009CF517 /* Main.storyboard */,
 				BECA4BC223CFD15A009CF517 /* Assets.xcassets */,
 				BECA4BC423CFD15A009CF517 /* LaunchScreen.storyboard */,
@@ -83,6 +99,10 @@
 			dependencies = (
 			);
 			name = CollectionViewsLab;
+			packageProductDependencies = (
+				BECA4BD223CFD2BF009CF517 /* NetworkHelper */,
+				BECA4BD723CFE68D009CF517 /* ImageKit */,
+			);
 			productName = CollectionViewsLab;
 			productReference = BECA4BB623CFD157009CF517 /* CollectionViewsLab.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,10 @@
 				Base,
 			);
 			mainGroup = BECA4BAD23CFD157009CF517;
+			packageReferences = (
+				BECA4BD123CFD2BF009CF517 /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */,
+				BECA4BD623CFE68D009CF517 /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = BECA4BB723CFD157009CF517 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECA4BCE23CFD245009CF517 /* CountriesAPIClient.swift in Sources */,
 				BECA4BBE23CFD157009CF517 /* ViewController.swift in Sources */,
+				BECA4BD523CFE589009CF517 /* CountryCell.swift in Sources */,
 				BECA4BBA23CFD157009CF517 /* AppDelegate.swift in Sources */,
+				BECA4BD023CFD255009CF517 /* Countries.swift in Sources */,
 				BECA4BBC23CFD157009CF517 /* SceneDelegate.swift in Sources */,
+				BECA4BDA23CFE8FF009CF517 /* CountryDVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +366,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BECA4BD123CFD2BF009CF517 /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/NetworkHelperSPM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+		BECA4BD623CFE68D009CF517 /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BECA4BD223CFD2BF009CF517 /* NetworkHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECA4BD123CFD2BF009CF517 /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */;
+			productName = NetworkHelper;
+		};
+		BECA4BD723CFE68D009CF517 /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECA4BD623CFE68D009CF517 /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BECA4BAE23CFD157009CF517 /* Project object */;
 }
